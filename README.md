@@ -1,5 +1,5 @@
 # Challenge_2
-**Smart AI Restaurant Reservation**
+**Smart AI Restaurant Reservation Bot**
 
 **Overview**
 
