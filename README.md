@@ -26,15 +26,17 @@ The system:
 
 **System Architecture**
 
-The system follows a layered architecture:
-
-  Client Application (Future Chatbot / Web / Mobile)
-                  ↓
-            Reservation API
-                  ↓
-    Table Allocation & Availability Logic
-                  ↓
-      Database (Tables & Reservations)
+User Interface (Chatbot)
+        ↓
+Reservation Engine
+        ↓
+Availability & Optimization Logic
+        ↓
+Database (Tables, Reservations, Waitlist)
+        ↓
+Notification System (SMS/Confirmation)
+        ↓
+Management Dashboard
 
 **How it Works**
 
@@ -52,7 +54,9 @@ iii)REST APIs
 iv)SQLite or in-memory database
 v)Git & GitHub
 
+
 **To Run the Project**
+
 1.Clone the Repository : git clone https://github.com/Caro26lina/Challenge_2.git
 
 2.Navigate to the Project Folder : cd restaurant-bot
