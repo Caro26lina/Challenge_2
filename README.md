@@ -59,12 +59,10 @@ v)Git & GitHub
 
 1.Clone the Repository : git clone https://github.com/Caro26lina/Challenge_2.git
 
-2.Navigate to the Project Folder : cd restaurant-bot
+2.Install Dependencies : pip install fastapi uvicorn sqlalchemy
 
-3.Install Dependencies : pip install fastapi uvicorn sqlalchemy
+3.Run the Application : uvicorn main:app --reload
 
-4.Run the Application : uvicorn main:app --reload
-
-5.Open in Browser : http://127.0.0.1:8000/docs
+4.Open in Browser : http://127.0.0.1:8000/docs
 
 
