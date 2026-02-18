@@ -27,15 +27,15 @@ The system:
 **System Architecture**
 
 User Interface (Chatbot)
-        ↓
+        ->
 Reservation Engine
-        ↓
+        ->
 Availability & Optimization Logic
-        ↓
+        ->
 Database (Tables, Reservations, Waitlist)
-        ↓
+        ->
 Notification System (SMS/Confirmation)
-        ↓
+        ->
 Management Dashboard
 
 **How it Works**
