@@ -1,30 +1,62 @@
-# Challenge_2
-**Smart AI Restaurant Reservation Bot**
+# Smart Restaurant Reservation Engine
+Intel Internship Challenge – 2 Submission
 
 **Overview**
 
-The Smart AI Restaurant Reservation and Experience Bot is a restaurant AI technology that modernizes the way restaurants interact with their diners. The solution allows restaurants to have a virtual receptionist, dining assistant, and restaurant operations manager - all in one AI-powered platform that goes beyond just taking restaurant reservations. Diners can check availability, make a reservation, view menus, provide dietary preferences/requirements, add themselves to a waitlist, and amend or cancel a reservation in a conversational format. The product acts as a tool for restaurants to drive restaurant capacity management, reduce no-show reservations, maintain service levels, and improve customer satisfaction. The project acts as an example of how hospitality operations can be efficiently driven by AI automation and knowledge compression.
+Smart Restaurant Reservation Engine- This is a Back-end system that is scheduled to work with the reservations of tables at restaurants in an organized way based on API logic. It is a project, which aims at developing the central reservation and allocation engine, which can be extended to achieve future integrations (chatbots, web apps, or mobile platforms).
+The solution does not focus on the implementation of a conversational interface, but it rather focuses on creating a scalable and dependable backend that will deal with availability tracking, table assignment, cancellation, and waitlist. The aim is to portray clean architecture, structured design of backends, and intelligent capacity management.
 
 **Problem Staement**
 
-Key problems faced by restaurants are poor handling of reservations due to limitations of manual scheduling, limited capabilities of simple online desk management systems, inefficient table assignments, customer wait times, difficulty processing special requests and orders accurately, and financial losses incurred due to no-shows. Menus and policies are also large documents that are expensive and slow for AI to read, understand, and parse. These obstacles limit restaurants' ability to run scalable personalized experiences.
+The operational challenges that restaurants often have to deal with are:
+1.Handling of reservations manually or inefficiently.
+2.Unwise table allocation techniques.
+3.Customers have to wait too long.
+4.Inconvenience in following the availability of the table in real time.
 
 **Proposed Solution**
 
-We have an idea to make an AI chatbot. This chatbot will help users with their reservations. Using the chatbot, the customer’s reservation details will be collected. At the same time, reservation availability is checked. The size of the reservation will determine the table assigned. If no table is available, a structured waitlist is created. The customer can also reschedule and cancel reservations. Both menu discovery and customer questions about policy can be handled by the chatbot. The chatbot’s policy knowledge will be compressed knowledge from ScaleDown. If a reservation table is available, the waitlist customer will be notified via Automated SMS. The SMS will also be sent as confirmation on booking and timely reminders. Both customers and restaurant end-users
-will benefit from this solution by intelligent decision making and process simplification.
+This project is defined as the implementation of a reservation engine based on the principles of a REST that will automatize the process of table management and booking.
+The system:
+1.Data that is stored in stores is seating capacity and availability status.
+2.Dynamically check the availability of tables.
+3.Gives the best table depending on the number of people.
+4.Makes organized reservations.
+5.Allows cancellations of reservations.
 
-**Unique Feature – AI Dining Experience Personalizer**
+**System Architecture**
 
-Apart from handling the basics, the chatbot can stand out by suggesting more so the “why” factor. The chatbot can infer the purpose of a restaurant visit (e.g. birthday, anniversary, business, etc.) and then adjust its recommendations to suit the occasion. In addition to simply booking the best available seating and time, the system may recommend the most optimal seating arrangement, specific menu items to highlight, potential add-ons such as cakes or decorations, triggers for restaurant staff to set up in advance and beyond. The function turns a booking interaction into a hospitality experience that would strengthen customer retention and improve brand equity to the restaurant.
+The system follows a layered architecture:
+
+  Client Application (Future Chatbot / Web / Mobile)
+                  ↓
+            Reservation API
+                  ↓
+    Table Allocation & Availability Logic
+                  ↓
+      Database (Tables & Reservations)
 
 **How it Works**
 
-The user talks to the chatbot through a conversation interface, where reservation or query details are captured and sent to the reservation engine, where the reservation engine checks for table availability, runs optimization logic and updates the database. Any knowledge required from menu’s or policy’s or knowledge from the repository can be retrieved from ScaleDown-compressed repository for ultra-fast delivery. Once the actions are complete, notifications are sent out to the customers and all the actions are reflected on management dashboard for further monitoring and analysis.
+1.A reservation request is submitted with the required party size.
+2.The system checks for available tables that match the requirement.
+3.If a suitable table is available, it is marked as reserved and linked to the reservation.
+4.If no table is available, the system supports structured waitlist handling.
+5.When a reservation is canceled, the assigned table is automatically freed and made available again.
 
-**Potential impact**
+**Tech Stack**
 
-The main thing the system can bring to the table is reducing no-shows and increasing table turnover byputting communication on autopilot and the capacity management to be more intelliegent, faster and more reliable answers to the guests. The impact is improved efficiency, better use of resources, higher customer satisfaction and more revenue opportunities. The project showcases how conversational ai can move beyond conversation to action.
+i)Python
+ii)FastAPI (or Flask, depending on implementation)
+iii)REST APIs
+iv)SQLite or in-memory database
+v)Git & GitHub
 
-**Future Scope**
-We have a lot of options for features that can be added to make your restaurant chatbot even more useful. Payment functions, booking functions, voice interaction, prediction models, a loyalty program, branch connections.
+**To Run the Project**
+1.Clone the Repository : git clone https://github.com/Caro26lina/Challenge_2.git
+2.Navigate to the Project Folder : cd restaurant-bot
+3.Install Dependencies : pip install fastapi uvicorn sqlalchemy
+4.Run the Application : uvicorn main:app --reload
+5.Open in Browser : http://127.0.0.1:8000/docs
+
+
